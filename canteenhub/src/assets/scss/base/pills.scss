@@ -1,0 +1,25 @@
+.nav-pills {
+  &.nav-pill-light {
+    .nav-link {
+      cursor: pointer;
+      border-color: $gray-200;
+      background-color: $gray-200;
+      box-shadow: none;
+      border-radius: 20px;
+
+      &.active {
+        background-color: $aero;
+        border-color: $aero;
+        color: $gray-900;
+      }
+    }
+
+    &.nav-pill-sm {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

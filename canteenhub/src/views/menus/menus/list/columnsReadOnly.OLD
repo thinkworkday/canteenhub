@@ -1,0 +1,117 @@
+// ** React Imports
+import { Link } from 'react-router-dom';
+
+import { getLoggedUser } from '@utils';
+
+// ** Custom Components
+import { DisplayStatus } from '@src/components/DisplayStatus';
+import moment from 'moment';
+
+// ** Third Party Components
+import {
+  Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+} from 'reactstrap';
+
+import {
+  MoreVertical, Trash2, Archive,
+} from 'react-feather';
+
+// ** Renders Role Columns
+const renderRole = (row) => {
+  const color = row.createdByModel === 'Administrator' ? 'light-secondary' : 'light-info';
+  return (
+    <span className="text-truncate text-capitalize align-middle">
+      <Badge color={color} pill>
+        {row.createdByModel}
+      </Badge>
+    </span>
+  );
+};
+
+// ** Renders Config
+const renderConfig = (row) => {
+  const color = row.menuParent ? 'light-secondary' : 'light-info';
+  const label = row.menuParent ? 'Default' : 'Variation';
+  return (
+    <span className="text-truncate text-capitalize align-middle">
+      <Badge color={color} pill>
+        {label}
+      </Badge>
+    </span>
+  );
+};
+
+// ** Renders Status Columns
+const renderStatus = (row) => (
+  <DisplayStatus status={row.status} />
+);
+
+export const columns = (toggleDeleteRecordModal) => {
+  const loggedUser = getLoggedUser();
+  const { role } = loggedUser;
+
+  return ([
+    {
+      name: 'Name',
+      selector: 'name',
+      cell: (row) => <Link to={`/${role}/menus/edit/${row._id}`}>{row.name}</Link>,
+    },
+    {
+      name: 'Description',
+      selector: (row) => `${row.description}`,
+      sortable: true,
+    },
+    // {
+    //   name: 'Configuration',
+    //   sortable: true,
+    //   cell: (row) => renderConfig(row),
+    // },
+    {
+      name: 'Created By',
+      sortable: true,
+      cell: (row) => renderRole(row),
+    },
+    {
+      name: 'Status',
+      sortable: true,
+      cell: (row) => renderStatus(row),
+    },
+    {
+      name: 'Last Modified',
+      sortable: true,
+      selector: (row) => row.updatedAt,
+      format: (row) => moment(row.updatedAt).fromNow(),
+    },
+    {
+      name: 'Actions',
+      width: '120px',
+      cell: (row) => (
+        <>
+          <UncontrolledDropdown>
+            <DropdownToggle tag="div" className="btn btn-sm">
+              <MoreVertical size={14} className="cursor-pointer action-btn" />
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem
+                tag={Link}
+                to={`/admin/menus/edit/${row._id}`}
+                className="w-100"
+              >
+                <Archive size={14} className="mr-50" />
+                <span className="align-middle">Edit</span>
+              </DropdownItem>
+              <DropdownItem
+                className="w-100"
+                onClick={() => toggleDeleteRecordModal(row)}
+              >
+                <Trash2 size={14} className="mr-50" />
+                <span className="align-middle">Delete</span>
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
+        </>
+      ),
+    },
+  ]);
+};

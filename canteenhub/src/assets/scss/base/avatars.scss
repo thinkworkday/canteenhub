@@ -1,0 +1,46 @@
+$avatar-sm-size: 30px;
+
+.avatar {
+  &.bg-success {
+    background-color: $accent !important;
+    color: $secondary !important;
+  }
+
+  &.avatar-lg {
+    .avatar-content {
+      font-size: 1.4rem;
+      .avatar-icon,
+      i,
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &.avatar-sm {
+    height: $avatar-sm-size;
+    width: $avatar-sm-size;
+    .avatar-content {
+      font-size: 0.8rem;
+      height: $avatar-sm-size;
+      width: $avatar-sm-size;
+      line-height: $avatar-sm-size;
+      .avatar-icon,
+      i,
+      svg {
+        height: $avatar-sm-size;
+        width: $avatar-sm-size;
+        font-size: $avatar-sm-size;
+      }
+    }
+  }
+}
+
+.avatar-group .avatar .avatar-content {
+  background-color: $bunting-navy-light !important;
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+}

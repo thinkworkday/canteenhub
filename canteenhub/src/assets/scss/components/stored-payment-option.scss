@@ -1,0 +1,23 @@
+.stored-payment-options {
+  li {
+    cursor: pointer;
+
+    svg {
+      border-radius: 8px;
+    }
+
+    &:hover {
+      background-color: white !important;
+    }
+
+    &.active {
+      color: black;
+      border-color: $aero;
+      background-color: transparent;
+
+      .checkbox {
+        background-color: $aero;
+      }
+    }
+  }
+}

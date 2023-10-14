@@ -1,0 +1,35 @@
+.dzu-dropzone {
+  border: 2px $gray-200 dashed !important;
+  border-radius: 8px !important;
+
+  &.dzu-dropzoneActive {
+    // border: 2px $aero dashed !important;
+    background-color: $aero-light;
+  }
+
+  .dzu-inputLabel {
+    text-align: center;
+    padding: 2rem !important;
+    color: $bunting-navy !important;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+  }
+
+  .dzu-previewContainer {
+    padding: 30px 0%;
+    border-bottom: 1px solid #ececec;
+    justify-content: center;
+
+    .dzu-previewImage {
+      width: auto;
+      max-height: 140px;
+      max-width: 140px;
+    }
+
+    .dzu-previewButton {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+}

@@ -1,0 +1,287 @@
+.btn {
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  height: fit-content;
+  // border-width: 1px !important;
+
+  &.btn-accent {
+    background-color: $accent;
+    color: $secondary;
+  }
+
+  &.btn-aero {
+    background-color: $aero;
+    color: $secondary;
+  }
+
+  &.btn-outline-aero {
+    border-color: $aero;
+    color: $aero;
+  }
+
+  &.btn-sm {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+
+    &.p-0 {
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.btn-xs {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+
+    svg {
+      height: 13px;
+      width: 13px;
+    }
+  }
+}
+
+.dropdown-menu .dropdown-item {
+  width: 100%;
+}
+
+.btn-row {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  &:hover {
+    background-color: $aero-light;
+  }
+  &.active {
+    // background-color: $aero-light;
+
+    svg.check-notificaiton {
+      background-color: $aero;
+      border-radius: 100%;
+      display: block !important;
+      position: absolute;
+      padding: 5px;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}
+
+.btn-row-2 {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  width: 100%;
+  border: 2px white solid;
+  background-color: white;
+  outline: none !important;
+  // &:hover {
+  //   background-color: $aero-light;
+  // }
+  &.active {
+    background-color: $aero-light;
+    border: 2px $aero solid;
+
+    svg.check-notificaiton {
+      background-color: $aero;
+      border-radius: 100%;
+      display: block !important;
+      position: absolute;
+      padding: 5px;
+      top: -10px;
+      right: 20px;
+    }
+
+    .date-item {
+      background-color: $aero;
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    display: none !important;
+    background-color: $gray-50;
+    border: 2px $gray-100 solid;
+
+    color: $gray-500 !important;
+
+    .transaction-title {
+      color: $gray-500 !important;
+    }
+
+    // .date-item {
+    //   background-color: $aero;
+    // }
+  }
+}
+
+.btn-card {
+  position: relative;
+  padding: 0.8rem 3rem 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  min-width: 330px;
+  max-width: 330px;
+  background-color: white;
+  box-shadow: $box-shadow;
+  border: 2px white solid;
+  outline: none !important;
+
+  .btn-edit {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    padding: 10px;
+    display: none;
+  }
+
+  &:hover {
+    background-color: $aero-light;
+
+    .btn-edit {
+      display: block;
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    background-color: $gray-100;
+    h6 {
+      color: $gray-500;
+    }
+
+    .avatar {
+      background-color: $gray-200 !important;
+      cursor: default;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  &.active {
+    border: 2px $aero solid;
+
+    svg.check-notificaiton {
+      background-color: $aero;
+      border-radius: 100%;
+      display: block !important;
+      position: absolute;
+      padding: 5px;
+      top: -10px;
+      right: 2px;
+    }
+  }
+}
+
+.btn-item,
+.btn-row {
+  position: relative;
+  padding: 0.8rem 1rem;
+  margin: 0;
+  border-radius: 5px;
+  // width: 330px;
+  background-color: white;
+  box-shadow: $box-shadow;
+  border: 1px $gray-100 solid;
+  height: 100%;
+  // border-left: 4px transparent solid;
+
+  .item-detail-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .item-title {
+    font-size: 0.9rem;
+  }
+
+  .item-description {
+    margin-top: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .item-price {
+    margin-bottom: 4px;
+  }
+  .item-qty {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow-dark;
+    .item-title,
+    h6 {
+      color: $primary;
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 1rem;
+
+    &.sm {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &.active {
+    // background-color: $aero-light;
+    border-left: 4px $aero solid;
+
+    svg.check-notificaiton {
+      background-color: $aero;
+      border-radius: 100%;
+      display: block !important;
+      position: absolute;
+      padding: 5px;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}
+
+.btn-row {
+  padding: 5px 10px;
+  height: auto;
+
+  img {
+    &.sm {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.btn-settings {
+  &.btn-xs {
+    height: 32px;
+    padding: 0px 10px;
+    height: 30px;
+  }
+}
+
+.action-btn {
+  background-color: $gray-100;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+  &:hover {
+    background-color: $radical-red-light;
+  }
+}

@@ -1,0 +1,55 @@
+.vertical-layout {
+  &.vertical-menu-modern {
+    .navigation {
+      font-size: 0.9rem;
+      font-weight: 400;
+      overflow-y: hidden;
+
+      > li {
+        > a svg,
+        > a i {
+          height: 18px !important;
+          width: 18px !important;
+          font-size: 1.35rem !important;
+        }
+
+        &.open:not(.menu-item-closing) > a,
+        &.sidebar-group-active > a {
+          border-radius: 8px;
+          background: none;
+          svg {
+            color: $primary;
+          }
+        }
+
+        ul {
+          li {
+            > a {
+              padding-left: 50px !important;
+              color: $gray-700;
+            }
+
+            &.active {
+              background: $gray-100;
+              box-shadow: none;
+
+              > a {
+                color: $gray-700;
+              }
+            }
+          }
+        }
+      }
+
+      li.has-sub > a:after {
+        top: 12px !important;
+      }
+
+      a {
+        &:after {
+          top: 12px;
+        }
+      }
+    }
+  }
+}

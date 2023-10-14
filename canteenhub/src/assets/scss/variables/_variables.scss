@@ -1,0 +1,154 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+// Color system
+
+$white: #fff !default;
+$gray-50: #fafafa !default;
+$gray-100: #f5f5f5 !default; // $gray-lightest
+$gray-200: #efefef !default; // $gray-lighter
+$gray-300: #c0c9d0 !default; // $gray-light
+$gray-400: #adb5bd !default;
+$gray-500: #636363 !default;
+$gray-600: #9ba4ae !default; // $gray
+$gray-700: #4e5154 !default;
+$gray-800: #1e1e1e !default; // $gray-dark
+$gray-900: #2a2e30 !default;
+$black: #000000 !default; // 231f48 22292f
+
+$radical-red: #fc345c;
+$radical-red-light: #ffaabb;
+$radical-red-lighter: #fff5f7;
+$bunting-navy: #181e4b;
+$bunting-navy-light: #9b9fba;
+$bunting-navy-lighter: #9b9fbaa8;
+$aero: #b7ffe4;
+$aero-light: #eafff7;
+
+$green: #22b02e !default; //$success
+$blue: #7f3f98 !default; //$info
+$orange: #f0783c !default; //$warning F0783C
+$yellow: #ffd965 !default; //$warning F0783C
+$red: #f90435 !default; //$danger
+
+$primary: $radical-red !default;
+$secondary: $bunting-navy !default;
+$accent: $aero !default;
+$info: $blue !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-50 !default;
+$dark: $bunting-navy !default;
+
+$text-muted: $gray-600 !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $gray-50 !default;
+$body-color: $bunting-navy !default;
+
+// Font
+$font-family-sans-serif: "DM Sans", sans-serif !default;
+$font-family-monospace: "DM Sans", sans-serif !default;
+
+// Buttons + Forms
+$btn-padding-y: 0.8rem !default;
+// $btn-padding-x: 1.5rem !default;
+// $input-btn-padding-y: 0.75rem !default;
+// $input-btn-padding-x: 2rem !default;
+
+// $input-btn-padding-y-sm: 0.486rem !default;
+// $input-btn-padding-x-sm: 1rem !default;
+// $input-btn-font-size-sm: $font-size-base * 0.9 !default;
+
+// $input-btn-padding-y-lg: 0.8rem !default;
+// $input-btn-padding-x-lg: 2rem !default;
+// $input-btn-font-size-lg: $font-size-base * 1.25 !default;
+// $btn-line-height: 1 !default;
+// $btn-border-radius: 0.358rem !default;
+// $btn-border-radius-lg: 0.358rem !default;
+// $btn-border-radius-sm: 0.358rem !default;
+
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s,
+  border 0s !default;
+
+// // stylelint-enable value-keyword-case
+$font-size-base: 1rem !default;
+// $font-size-lg: ceil($font-size-base * 1.25) !default;
+// $font-size-sm: ceil($font-size-base * 0.85) !default;
+
+// $font-weight-normal: 400 !default;
+// $font-weight-bold: 500 !default;
+// $font-weight-bolder: 600 !default;
+
+// $line-height-base: 1.45 !default;
+
+$h1-font-size: $font-size-base * 2.3 !default;
+$h2-font-size: $font-size-base * 1.8 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.286 !default;
+$h5-font-size: $font-size-base * 1.07 !default;
+
+// $headings-font-family: inherit !default;
+$headings-color: $bunting-navy !default;
+
+// Forms
+// $custom-control-border-color: #d8d6de;
+// $label-margin-bottom: 0.2857rem !default;
+
+// $input-padding-y: 0.438rem !default;
+// $input-padding-x: 1rem !default;
+// $input-font-size: 1rem !default;
+// $input-line-height: $line-height-base !default;
+
+// $input-padding-y-sm: 0.188rem !default;
+// $input-padding-x-sm: 0.857rem !default;
+// $input-font-size-sm: 0.857rem !default;
+
+// $input-padding-y-lg: 0.75rem !default;
+// $input-padding-x-lg: 1.143rem !default;
+// $input-font-size-lg: 1.143rem !default;
+
+// $input-disabled-bg: #efefef !default;
+
+// $input-color: $body-color !default;
+// $input-border-color: $custom-control-border-color !default;
+// $input-box-shadow: inset 0 1px 1px rgba($black, 0.075) !default;
+
+// $input-border-radius: $border-radius !default;
+// $input-border-radius-lg: $border-radius !default;
+// $input-border-radius-sm: $border-radius !default;
+
+// $input-focus-border-color: $secondary !default;
+// $input-focus-box-shadow: 0 3px 10px 0 rgba($black, 0.1) !default;
+
+$input-placeholder-color: $gray-300 !default;
+// $input-plaintext-color: $body-color !default;
+
+// $input-height: 2.714rem !default;
+// $input-height-sm: 2.142rem !default;
+// $input-height-lg: 3.2857rem !default;
+
+//  -------------------------------
+//    Avatar
+//  -------------------------------
+
+$avatar-size: 40px !default;
+// $avatar-status-size: 11px !default;
+// $avatar-status-size-lg: 17px !default;
+
+$avatar-size-xl: 70px !default;
+$avatar-size-lg: 50px !default;
+$avatar-size-sm: 24px !default;
+
+// shadow
+$box-shadow: 0px 10px 20px rgba(18, 38, 63, 0.0313726) !default;
+$box-shadow-dark: 0px 10px 20px rgba(18, 38, 63, 0.1) !default;
+
+//  -------------------------------
+//    Checkout / Cart
+//  -------------------------------
+
+$cart-width-lg: 380px;

@@ -1,0 +1,37 @@
+.table-header {
+  padding: 2rem 0 1rem 0;
+
+  .btn-flat-light {
+    color: $gray-400;
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+  small {
+    color: $gray-400;
+  }
+  h3 {
+    // margin: 2rem 0;
+    text-transform: capitalize;
+  }
+  // .inline-edit-wrapper {
+  .trigger-inline-edit {
+    .action-btn {
+      display: none !important;
+    }
+
+    &:hover {
+      .action-btn {
+        display: block !important;
+      }
+    }
+  }
+  // }
+}
+
+.clear-link {
+  color: $gray-400;
+  width: 80px;
+  padding: 0;
+  font-size: 14px;
+}

@@ -1,0 +1,30 @@
+.sortable {
+  &.list-group {
+    border: none !important;
+
+    .list-group-item {
+      border: none;
+      border-bottom: 1px $gray-200 solid;
+      border-radius: 0 !important;
+      &:first-child {
+        border-top: 1px $gray-200 solid;
+      }
+    }
+  }
+
+  .handle {
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: $gray-100;
+    padding: 6px;
+    border-radius: 100%;
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+
+  .sortable-chosen {
+    background-color: $aero-light;
+  }
+}

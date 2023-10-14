@@ -1,0 +1,105 @@
+body {
+  font-size: 15px;
+}
+
+:root {
+  font-size: 100%;
+  body {
+    margin: 0;
+    // Body font size 16px
+  }
+}
+
+// Backgrounds
+.bg-warning-light {
+  background-color: lighten($warning, 35%);
+}
+
+.bg-gray-50 {
+  background-color: $gray-50;
+}
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+.bg-gray-400 {
+  background-color: $gray-400;
+}
+.bg-gray-500 {
+  background-color: $gray-500;
+}
+.bg-gray-600 {
+  background-color: $gray-600;
+}
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+.bg-gray-800 {
+  background-color: $gray-800;
+}
+.bg-gray-900 {
+  background-color: $gray-900;
+}
+
+// Colors
+.text-gray-50 {
+  color: $gray-50 !important;
+}
+.text-gray-100 {
+  color: $gray-100 !important;
+}
+.text-gray-200 {
+  color: $gray-200 !important;
+}
+.text-gray-300 {
+  color: $gray-300 !important;
+}
+.text-gray-400 {
+  color: $gray-400 !important;
+}
+.text-gray-500 {
+  color: $gray-500 !important;
+}
+.text-gray-600 {
+  color: $gray-600 !important;
+}
+.text-gray-700 {
+  color: $gray-700 !important;
+}
+.text-gray-800 {
+  color: $gray-800 !important;
+}
+.text-gray-900 {
+  color: $gray-900 !important;
+}
+
+// APP loading spinner
+// extends: @core/scss/react/app-loader.scss
+.loading {
+  .effect-1,
+  .effect-2 {
+    border-left: 3px solid $primary;
+  }
+
+  .effect-3 {
+    border-left: 3px solid $primary;
+  }
+}
+
+// avatar
+.avatar {
+  // avatar content
+  .avatar-content {
+    font-size: 1rem;
+  }
+
+  img {
+    height: $avatar-size;
+    width: $avatar-size;
+  }
+}

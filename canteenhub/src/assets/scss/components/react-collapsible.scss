@@ -1,0 +1,73 @@
+.Collapsible {
+  position: relative;
+  .Collapsible__trigger {
+    display: flex;
+    background-color: $gray-100;
+    padding: 10px 1rem;
+    margin-bottom: 5px;
+
+    .trigger-wrapper {
+      width: calc(100% - 60px);
+    }
+
+    &.is-open {
+      .chevron-down {
+        display: none;
+      }
+    }
+    &:not(.is-open) {
+      .chevron-up {
+        display: none;
+      }
+    }
+  }
+
+  // &.no-sibling {
+  //   .Collapsible__trigger {
+  //     .trigger-wrapper {
+  //       width: 100% !important;
+  //     }
+  //   }
+  // }
+
+  .Collapsible__action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    border-left: 1px white solid !important;
+    margin-bottom: 10px;
+
+    .btn {
+      border: none !important;
+    }
+    .dropdown-menu {
+      margin-top: 0px;
+    }
+  }
+
+  .Collapsible__contentInner {
+    .list-group {
+      border: none;
+      border-radius: 0;
+      margin: 0;
+
+      .list-group-item {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px $gray-100 solid;
+
+        &.unavailable {
+          color: $text-muted;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
+// .Collapsible__contentOuter {
+//   flex-basis: 100%;
+//   width: 0px;
+// }

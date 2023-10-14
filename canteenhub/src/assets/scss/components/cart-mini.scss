@@ -1,0 +1,124 @@
+.mini-cart {
+  border-left: 1px $gray-200 solid;
+  width: $cart-width-lg;
+  position: fixed;
+  right: 0;
+  top: 133px;
+  height: calc(100vh - 211px);
+  // overflow: hidden;
+  z-index: 1;
+  background-color: white;
+  // padding-right: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .checkout-items {
+    height: 70%;
+    border-top: 1px $gray-200 solid;
+    overflow-y: auto;
+    padding: 2px;
+    // padding: 1rem;
+    padding-top: 2rem;
+    // padding-right: 2rem;
+  }
+  .order-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+
+    .quantity-events {
+      flex: 1;
+    }
+    .description {
+      max-width: 70%;
+    }
+  }
+
+  .price-details {
+    border-top: 1px $gray-200 solid;
+    padding-top: 1.2rem;
+    .price-detail {
+      padding: 0.2rem 0;
+      font-size: 0.9rem;
+
+      &.detail-total {
+        border-top: 1px $gray-200 solid;
+        padding-top: 1.2rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // .card {
+  //   border-radius: 0px;
+  //   height: 100%;
+  //   position: relative;
+
+  //   .card-body {
+  //     position: relative;
+  //     height: 50%;
+  //     padding-bottom: 0.5rem;
+  //   }
+  // }
+}
+
+.mini-cart-summary {
+  .profile-order-wrapper {
+    .profile-order-details {
+      border-top: 1px $gray-200 solid;
+      border-bottom: 1px $gray-200 solid;
+      padding: 0.5rem 0rem;
+      // background-color: $gray-50;
+      .name {
+        margin: 0;
+        margin-left: 10px;
+        line-height: 28px;
+      }
+      .events {
+        line-height: 28px;
+        font-size: 0.8rem;
+        color: $secondary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .profile-list {
+    border-top: 1px $gray-200 solid;
+    padding: 1rem 0rem 0rem 0rem;
+    .event-count {
+      width: 80px;
+      min-width: 80px;
+    }
+  }
+
+  .checkout-items {
+    // height: 70%;
+    // border-top: 1px $gray-200 solid;
+    overflow-y: auto;
+    padding: 2px;
+    padding-top: 1rem;
+  }
+  .order-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+
+    // .description {
+    //   max-width: 75%;
+    // }
+  }
+
+  .price-details {
+    border-top: 1px $gray-200 solid;
+    padding-top: 1.2rem;
+    .price-detail {
+      padding: 0.2rem 0;
+
+      &.detail-total {
+        border-top: 1px $gray-200 solid;
+        padding-top: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

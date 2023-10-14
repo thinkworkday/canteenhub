@@ -1,0 +1,64 @@
+.event-sidebar .react-select {
+  z-index: unset !important;
+}
+
+.fc {
+  .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    overflow: hidden;
+  }
+  .fc-daygrid-dot-event {
+    flex-wrap: wrap;
+  }
+
+  .fc-toolbar {
+    .fc-button-group {
+      .fc-dayGridMonth-button,
+      .fc-timeGridWeek-button,
+      .fc-timeGridDay-button,
+      .fc-listMonth-button {
+        padding: 0.4rem 1rem !important;
+      }
+    }
+  }
+
+  .fc-daygrid-day.fc-day-today {
+    background-color: $aero-light !important;
+  }
+}
+
+// Flatpickr
+.date-selector {
+  border: 1px $gray-200 solid;
+  border-radius: 8px;
+
+  &.is-invalid {
+    border: 1px $danger solid;
+  }
+  // padding-left: 1rem;
+  span {
+    padding: 0.5rem 0;
+    line-height: 1;
+  }
+
+  input {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+  }
+  button {
+    margin: 0;
+    border: none !important;
+    background: $aero;
+    height: 40px;
+    border-radius: 8px 0 0px 8px;
+    padding: 0 25px;
+    margin-right: 1rem;
+  }
+}
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}

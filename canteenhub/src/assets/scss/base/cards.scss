@@ -1,0 +1,77 @@
+.card-approve-cta {
+  .card-icon {
+    background-color: $aero;
+    padding: 1rem;
+    border-radius: 100%;
+    width: auto;
+    margin-right: 2rem;
+
+    img {
+      height: 2rem;
+      width: auto;
+    }
+
+    &.pending {
+      background-color: $warning;
+      color: white;
+    }
+  }
+  // &:hover {
+  //   border: 10px red solid;
+  // }
+}
+
+.card-action {
+  svg {
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+.card-row {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  &:hover {
+    // background-color: $gray-100;
+    .row-cta-edit {
+      display: block !important;
+    }
+  }
+}
+
+.card-store-list {
+  img {
+    max-width: 60px;
+    margin-right: 1rem;
+  }
+  .no-image {
+    margin-right: 35px;
+  }
+
+  .store-row {
+    margin-bottom: 1rem;
+  }
+}
+
+.card-profile {
+  .card-header {
+    padding: 15px 15px 10px 15px;
+    margin-bottom: 20px;
+    svg {
+      max-height: 80px;
+      width: auto;
+      opacity: 0.5;
+    }
+  }
+
+  .card-body {
+    padding-top: 40px !important;
+  }
+
+  &.profile-customer {
+    .card-header {
+      background-color: $radical-red-lighter;
+    }
+  }
+}

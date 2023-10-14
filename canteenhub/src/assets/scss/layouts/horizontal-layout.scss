@@ -1,0 +1,20 @@
+.horizontal-layout {
+  .app-content {
+    padding: calc(#{$content-padding} + #{$navbar-height}) #{$content-padding} 0 !important;
+  }
+  .horizontal-menu-wrapper {
+    display: none !important;
+  }
+
+  .alert-messages-wrapper {
+    background-color: red;
+  }
+
+  .navbar-fixed {
+    // top: initial;
+    // transition: top 0.5s ease;
+    &.navbar-scrolled {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.alert {
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-radius: 0;
+
+  &.alert-light {
+    background-color: $gray-50;
+    color: $gray-700;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent !important;
+      text-decoration: underline;
+    }
+  }
+
+  &.alert-top {
+    border-radius: 0;
+    margin: 0;
+
+    .alert-body {
+      padding: 0 2rem;
+    }
+  }
+}

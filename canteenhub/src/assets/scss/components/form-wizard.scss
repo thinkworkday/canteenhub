@@ -1,0 +1,198 @@
+.checkout-wizard {
+  .bs-stepper {
+    box-shadow: none;
+
+    .bs-stepper-header {
+      position: fixed;
+      top: 60px;
+      background-color: white;
+      box-shadow: $box-shadow;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 1rem;
+      z-index: 99;
+
+      .step {
+        button {
+          padding-left: 0;
+          .bs-stepper-label {
+            padding-left: 15px;
+          }
+        }
+      }
+
+      .bs-stepper-title {
+        font-size: 0.9rem !important;
+        font-weight: 300 !important;
+        color: $gray-900 !important;
+        letter-spacing: 0.2px !important;
+        opacity: 1 !important;
+        .title {
+          margin-left: 1rem;
+        }
+      }
+
+      .active {
+        .bs-stepper-title {
+          color: $primary !important;
+          font-weight: 600 !important;
+        }
+      }
+      .crossed {
+        .bs-stepper-title {
+          color: $gray-400 !important;
+        }
+      }
+    }
+
+    .bs-stepper-content {
+      padding: 0;
+      // height: calc(100vh - 180px);
+      background-color: $gray-50;
+      // overflow-y: hidden;
+      // padding: 6rem 4rem !important;
+      // background-color: $gray-50;
+
+      .content {
+        padding: 6rem 4rem 2rem 4rem !important;
+
+        // &.step-1,
+        // &.step-2 {
+        // }
+        &.step-3 {
+          height: calc(100vh - 180px); // view height minus footer and header
+          width: calc(100% - #{$cart-width-lg} + 39px);
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+
+        // &.step-4 {
+        // height: calc(100vh - 180px); // view height minus footer and header
+        // width: calc(100% - #{$cart-width-lg} + 39px);
+        // overflow-y: scroll;
+        // overflow-x: hidden;
+        // }
+      }
+
+      // &.step-3,
+      // &.step-4 {
+      //   // width: calc(40% - $cart-width-lg);
+      //   width: calc(100% - #{$cart-width-lg} + 40px);
+      // }
+
+      .content-header {
+        max-width: 600px;
+      }
+    }
+
+    .progress {
+      background-color: transparent;
+      border-radius: 0;
+      height: 3px;
+      margin-top: -4px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+
+      .progress-bar {
+        background-color: $radical-red-light;
+        border-radius: 0;
+      }
+    }
+
+    .action-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      padding: 1rem 1rem;
+      width: 100%;
+      box-shadow: $box-shadow;
+      border-top: 1px $gray-200 solid;
+    }
+  }
+
+  #payment-form #payment-message {
+    background-color: lighten($danger, 40%);
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  //** Responsive Navbar
+  // =========================================
+  @include media-breakpoint-down(sm) {
+    .bs-stepper-header {
+      top: 52px !important;
+      padding: 5px 0px 10px 0px !important;
+      flex-direction: row !important;
+
+      .step button .bs-stepper-label {
+        padding-left: 10px !important;
+        padding-left: 0.7rem !important;
+      }
+      .bs-stepper-title .title {
+        margin-left: 0rem !important;
+        font-size: 0.8rem !important;
+      }
+    }
+
+    .action-wrapper {
+      button {
+        padding: 0.8rem 1rem;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .bs-stepper .bs-stepper-content .content {
+      padding: 3rem 0rem 0rem 0rem !important;
+
+      &.step-1 {
+        .btn-card {
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &.step-2 {
+        .btn-row-2 {
+          margin-bottom: 10px;
+        }
+      }
+
+      &.step-3 {
+        width: 100%;
+        height: unset;
+        overflow-y: unset;
+        overflow-x: unset;
+
+        .basket-trigger {
+          position: fixed;
+          width: 100%;
+          bottom: 80px;
+          left: 0;
+          padding: 1rem;
+          background: white;
+        }
+        .mini-cart {
+          width: 100%;
+          position: fixed;
+          top: 104px;
+          height: calc(100vh - 183px);
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .bs-stepper .bs-stepper-content .content {
+      &.step-3 {
+        .mini-cart {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.form-control {
+  background-color: $gray-50;
+  padding: 1.3rem 1rem;
+  border: 1px solid $gray-100;
+
+  &.form-control-sm {
+    padding: 0.188rem 0.857rem;
+    border-radius: 0.357rem;
+  }
+
+  &:focus {
+    border-color: $gray-300;
+  }
+}
+
+.form-control[readonly] {
+  color: $dark !important;
+}
+
+.input-group-text {
+  border: 1px solid $gray-100;
+  background-color: $gray-50;
+
+  &.input-group-small {
+    padding: 0.188rem 0.6rem;
+    border-radius: 0.357rem;
+    font-size: 0.9rem;
+  }
+}
+
+.input-group:not(.bootstrap-touchspin):focus-within .form-control,
+.input-group:not(.bootstrap-touchspin):focus-within .input-group-text {
+  border-color: $gray-300;
+}
+
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-img-wrapper {
+  height: 100px;
+  // position: relative;
+  // max-height: 100px;
+}
+
+.repeater-row-sm {
+  margin-bottom: 0px;
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .btn-xs {
+    padding: 0.53rem 0.53rem;
+    border-radius: 0.357rem;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: white;
+}
